@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: 248 249 251;
+  --surface-raised: 255 255 255;
+  --ink: 11 20 40;
+  --ink-soft: 118 131 154;
+  --line: 228 232 239;
+  --brand: 31 65 214;
+  --accent: 47 174 104;
+}
+.dark {
+  --surface: 7 13 28;
+  --surface-raised: 17 30 58;
+  --ink: 236 240 248;
+  --ink-soft: 163 174 193;
+  --line: 36 64 111;
+  --brand: 143 176 255;
+  --accent: 132 223 168;
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply font-sans antialiased;
+    background: rgb(var(--surface));
+    color: rgb(var(--ink));
+    margin: 0;
+    overscroll-behavior-y: none;
+  }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+  :focus-visible {
+    outline: 2px solid rgb(var(--brand));
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  [dir='rtl'] body { letter-spacing: 0; }
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type='number'] { -moz-appearance: textfield; }
+}
+
+@layer components {
+  .card {
+    background: rgb(var(--surface-raised));
+    border: 1px solid rgb(var(--line));
+    @apply rounded-2xl shadow-card;
+  }
+  .muted { color: rgb(var(--ink-soft)); }
+  .hairline { border-color: rgb(var(--line)); }
+  .field {
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--line));
+    color: rgb(var(--ink));
+    @apply w-full rounded-xl px-3 py-2.5 text-[15px] outline-none transition;
+  }
+  .field:focus { border-color: rgb(var(--brand)); box-shadow: 0 0 0 3px rgb(var(--brand) / 0.15); }
+  .skeleton { @apply animate-pulse rounded-xl bg-sand-200 dark:bg-navy-700; }
+  .safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
