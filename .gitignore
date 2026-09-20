@@ -7,3 +7,4 @@ dist-ssr
 .env.production
 *.tsbuildinfo
 src/content/mediaManifest.preview.json
+dist
