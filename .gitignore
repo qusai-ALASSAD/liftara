@@ -1,8 +1,9 @@
 node_modules
-dist
+dist-preview
 dist-ssr
 .DS_Store
 *.local
 .env
 .env.production
 *.tsbuildinfo
+src/content/mediaManifest.preview.json

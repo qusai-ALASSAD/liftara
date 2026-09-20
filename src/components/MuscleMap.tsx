@@ -37,7 +37,7 @@ export function MuscleMap({
   const regions = side === 'front' ? FRONT : BACK;
   return (
     <svg viewBox="0 0 120 180" className="h-full w-full" role="group" aria-label={t(`muscles.${side}`)}>
-      <path d={SILHOUETTE} className="fill-sand-200 dark:fill-navy-700" />
+      <path d={SILHOUETTE} className="fill-ink-200 dark:fill-ink-700" />
       {regions.map((r) => {
         const isSelected = selected === r.muscle;
         const isHot = highlight.includes(r.muscle);
@@ -52,7 +52,7 @@ export function MuscleMap({
             onClick={() => onSelect(r.muscle)}
             onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelect(r.muscle); } }}
             className={`cursor-pointer transition-colors ${
-              isSelected ? 'fill-royal-600' : isHot ? 'fill-moss-500/70' : 'fill-royal-300/60 hover:fill-royal-400'
+              isSelected ? 'fill-brand-500' : isHot ? 'fill-success-500/70' : 'fill-brand-300/60 hover:fill-brand-400'
             }`}
           />
         );

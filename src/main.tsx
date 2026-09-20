@@ -1,7 +1,16 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import App from './App';
+// Schriften lokal gebündelt – die PWA bleibt auch offline typografisch korrekt.
+import '@fontsource/sora/latin-500.css';
+import '@fontsource/sora/latin-600.css';
+import '@fontsource/sora/latin-700.css';
+import '@fontsource/manrope/latin-400.css';
+import '@fontsource/manrope/latin-500.css';
+import '@fontsource/manrope/latin-600.css';
+import '@fontsource/manrope/latin-700.css';
+import '@fontsource-variable/noto-sans-arabic/wght.css';
 import './index.css';
 import { useAppStore } from '@/store/appStore';
 import { applyTheme } from '@/lib/settings';
@@ -15,7 +24,10 @@ window.matchMedia?.('(prefers-color-scheme: dark)').addEventListener?.('change',
 
 void useAppStore.getState().init();
 
-if ('serviceWorker' in navigator && import.meta.env.PROD) {
+// Vorschau-Build (eine einzelne HTML-Datei) läuft ohne Server: dann Hash-Routing.
+const Router = import.meta.env.VITE_SINGLE_FILE ? HashRouter : BrowserRouter;
+
+if ('serviceWorker' in navigator && import.meta.env.PROD && !import.meta.env.VITE_SINGLE_FILE) {
   import('virtual:pwa-register')
     .then(({ registerSW }) => registerSW({ immediate: true }))
     .catch(() => { /* PWA-Registrierung ist optional */ });
@@ -23,8 +35,8 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
 
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <Router basename={import.meta.env.VITE_SINGLE_FILE ? undefined : import.meta.env.BASE_URL}>
       <App />
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>
 );

@@ -1,0 +1,84 @@
+{
+  "liftaraId": "rear-delt-fly-machine",
+  "liftaraName": "Reverse Pec Deck",
+  "sourceId": "Reverse_Machine_Flyes",
+  "sourceName": "Reverse Machine Flyes",
+  "sourceEquipment": "machine",
+  "sourcePrimaryMuscles": [
+    "shoulders"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.64,
+  "confidenceParts": {
+    "name": 0.2,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Reverse_Machine_Flyes/0.jpg",
+      "original": 77240,
+      "optimized": 59324,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "49990583e4bff0c9"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Reverse_Machine_Flyes/1.jpg",
+      "original": 77689,
+      "optimized": 59920,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "88f4f7cad9d3c44b"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 20978,
+      "sha256": "6c1d859a54494d81",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "pecDeck",
+      "bytes": 7838,
+      "sha256": "0b351070cc2d8c98",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 59457,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

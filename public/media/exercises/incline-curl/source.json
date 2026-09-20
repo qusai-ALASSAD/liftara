@@ -1,0 +1,84 @@
+{
+  "liftaraId": "incline-curl",
+  "liftaraName": "Incline Dumbbell Curl",
+  "sourceId": "Incline_Dumbbell_Curl",
+  "sourceName": "Incline Dumbbell Curl",
+  "sourceEquipment": "dumbbell",
+  "sourcePrimaryMuscles": [
+    "biceps"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 1,
+  "confidenceParts": {
+    "name": 1,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Incline_Dumbbell_Curl/0.jpg",
+      "original": 53708,
+      "optimized": 36226,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "ccd142c8bdcd269d"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Incline_Dumbbell_Curl/1.jpg",
+      "original": 54063,
+      "optimized": 36874,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "67ac42ef775f273a"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 20906,
+      "sha256": "d150efa0021ec871",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "inclineBenchDumbbell",
+      "bytes": 6066,
+      "sha256": "99b3af76b083c4fc",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 27503,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

@@ -1,0 +1,84 @@
+{
+  "liftaraId": "single-leg-calf-raise",
+  "liftaraName": "Single-Leg Calf Raise",
+  "sourceId": "Standing_Dumbbell_Calf_Raise",
+  "sourceName": "Standing Dumbbell Calf Raise",
+  "sourceEquipment": "dumbbell",
+  "sourcePrimaryMuscles": [
+    "calves"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "intermediate",
+  "matchedBy": "override",
+  "confidence": 0.7,
+  "confidenceParts": {
+    "name": 0.3333333333333333,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Standing_Dumbbell_Calf_Raise/0.jpg",
+      "original": 54681,
+      "optimized": 36072,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "f31b2451d88a34ef"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Standing_Dumbbell_Calf_Raise/1.jpg",
+      "original": 54554,
+      "optimized": 35654,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "5a6fb39ff93dbe2e"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 22314,
+      "sha256": "2ce1c2391f08c06d",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "calfStep",
+      "bytes": 2696,
+      "sha256": "36f19fe8fbe6b780",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 29470,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:07:06.390Z"
+}

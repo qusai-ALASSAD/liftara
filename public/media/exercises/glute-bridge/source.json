@@ -1,0 +1,86 @@
+{
+  "liftaraId": "glute-bridge",
+  "liftaraName": "Glute Bridge",
+  "sourceId": "Butt_Lift_Bridge",
+  "sourceName": "Butt Lift (Bridge)",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "glutes"
+  ],
+  "sourceSecondaryMuscles": [
+    "hamstrings"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.5825,
+  "confidenceParts": {
+    "name": 0.25,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 0.2
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Butt_Lift_Bridge/0.jpg",
+      "original": 57056,
+      "optimized": 44360,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "89ff6d95d91f3e38"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Butt_Lift_Bridge/1.jpg",
+      "original": 58796,
+      "optimized": 45906,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "a4dc092a93a0b4bc"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 22548,
+      "sha256": "15f791fe85805eb7",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 31161,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

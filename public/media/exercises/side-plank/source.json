@@ -1,0 +1,86 @@
+{
+  "liftaraId": "side-plank",
+  "liftaraName": "Side Plank",
+  "sourceId": "Side_Bridge",
+  "sourceName": "Side Bridge",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "abdominals"
+  ],
+  "sourceSecondaryMuscles": [
+    "shoulders"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.7,
+  "confidenceParts": {
+    "name": 0.3333333333333333,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Side_Bridge/0.jpg",
+      "original": 69518,
+      "optimized": 55346,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "db44f379fe0b8db6"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Side_Bridge/1.jpg",
+      "original": 63711,
+      "optimized": 51448,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "9d546ed92da62b54"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 22432,
+      "sha256": "af0ba7aa5aadea99",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 42179,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

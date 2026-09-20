@@ -1,0 +1,87 @@
+{
+  "liftaraId": "bodyweight-squat",
+  "liftaraName": "Bodyweight Squat",
+  "sourceId": "Bodyweight_Squat",
+  "sourceName": "Bodyweight Squat",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "quadriceps"
+  ],
+  "sourceSecondaryMuscles": [
+    "glutes",
+    "hamstrings"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 1,
+  "confidenceParts": {
+    "name": 1,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Bodyweight_Squat/0.jpg",
+      "original": 37986,
+      "optimized": 25716,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "4d6b70381dd254c2"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Bodyweight_Squat/1.jpg",
+      "original": 41546,
+      "optimized": 29044,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "0debbe932d6117c5"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 23634,
+      "sha256": "4a189b4dc1a663fb",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 20807,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:06:09.963Z"
+}

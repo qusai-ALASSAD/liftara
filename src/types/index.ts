@@ -30,6 +30,28 @@ export type ContraindicationTag =
 
 export interface LocalizedText { de: string; en: string; ar: string }
 
+/**
+ * Medienmodell einer Übung.
+ * Reale Fotos kommen aus dem Import (free-exercise-db, Public Domain).
+ * `targetMuscleImage` ist kein Dateipfad, sondern die Ansicht der eigenen
+ * Körperkarte – sie wird zur Laufzeit aus den Zielmuskeln gezeichnet.
+ */
+export interface ExerciseMedia {
+  startImage?: string;
+  finishImage?: string;
+  /** Lehrschleife Start -> Ende -> Start, ohne Ton */
+  executionVideo?: string;
+  executionKind?: 'instructional-loop' | 'recorded';
+  equipmentImage?: string;
+  /** gerendertes Zielmuskel-Bild; die Körperkarte dient als Rückfallebene */
+  targetMuscleImage?: string;
+  targetMuscleView: 'front' | 'back';
+  source?: string;
+  sourceName?: string;
+  license?: string;
+  licenseUrl?: string;
+}
+
 export interface Exercise {
   id: string;
   name: LocalizedText;
@@ -177,7 +199,6 @@ export interface BodyMeasurement {
 }
 
 export interface ProgressPhoto { id: string; date: number; blob: Blob; note?: string }
-export interface ExportPhoto { id: string; date: number; dataUrl: string; note?: string }
 
 export interface PersonalRecord {
   id: string; exerciseId: string; date: number;
@@ -213,6 +234,8 @@ export interface Settings {
   premium: boolean;
   consent: Consent;
   completedWorkoutsSinceInterstitial: number;
+  /** gemerkte Übungen (Favoriten) */
+  favorites: string[];
   lastRewardUnlockAt?: number;
   installPromptDismissedAt?: number;
 }
@@ -227,6 +250,5 @@ export interface ExportBundle {
   records: PersonalRecord[];
   achievements: Achievement[];
   programStates: ProgramState[];
-  photos: ExportPhoto[];
   settings: Settings;
 }

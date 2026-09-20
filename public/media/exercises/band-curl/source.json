@@ -1,0 +1,55 @@
+{
+  "liftaraId": "band-curl",
+  "liftaraName": "Band Curl",
+  "files": [],
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 21788,
+      "sha256": "dc739c2ebda814aa",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "band",
+      "bytes": 7116,
+      "sha256": "342a58d5d89cf998",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "start",
+      "file": "start.webp",
+      "bytes": 15914,
+      "sha256": "618307f880c8a70b",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "finish",
+      "file": "finish.webp",
+      "bytes": 14170,
+      "sha256": "6cbf03d4f805c34e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 15383,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:33:19.086Z",
+  "dataset": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  }
+}

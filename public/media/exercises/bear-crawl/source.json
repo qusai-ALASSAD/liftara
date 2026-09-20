@@ -1,0 +1,55 @@
+{
+  "liftaraId": "bear-crawl",
+  "liftaraName": "Bear Crawl",
+  "files": [],
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 22100,
+      "sha256": "f054327f805595cc",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "start",
+      "file": "start.webp",
+      "bytes": 13710,
+      "sha256": "6abb66e7be61dc5c",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "finish",
+      "file": "finish.webp",
+      "bytes": 15990,
+      "sha256": "3c19969b57c0a387",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 15828,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:33:32.308Z",
+  "dataset": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  }
+}

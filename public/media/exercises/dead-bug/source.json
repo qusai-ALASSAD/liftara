@@ -1,0 +1,84 @@
+{
+  "liftaraId": "dead-bug",
+  "liftaraName": "Dead Bug",
+  "sourceId": "Dead_Bug",
+  "sourceName": "Dead Bug",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "abdominals"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 0.92,
+  "confidenceParts": {
+    "name": 1,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 0.2
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Dead_Bug/0.jpg",
+      "original": 45381,
+      "optimized": 19834,
+      "quality": 82,
+      "width": 1200,
+      "height": 675,
+      "sha256": "ae5902cffe910141"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Dead_Bug/1.jpg",
+      "original": 46759,
+      "optimized": 20756,
+      "quality": 82,
+      "width": 1200,
+      "height": 675,
+      "sha256": "573e7d952845afff"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 21464,
+      "sha256": "46dbcc2f6d4569a1",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 16258,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

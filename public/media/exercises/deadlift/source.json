@@ -1,0 +1,93 @@
+{
+  "liftaraId": "deadlift",
+  "liftaraName": "Conventional Deadlift",
+  "sourceId": "Barbell_Deadlift",
+  "sourceName": "Barbell Deadlift",
+  "sourceEquipment": "barbell",
+  "sourcePrimaryMuscles": [
+    "lower back"
+  ],
+  "sourceSecondaryMuscles": [
+    "calves",
+    "forearms",
+    "glutes",
+    "hamstrings",
+    "lats",
+    "middle back",
+    "quadriceps",
+    "traps"
+  ],
+  "sourceLevel": "intermediate",
+  "matchedBy": "override",
+  "confidence": 0.55,
+  "confidenceParts": {
+    "name": 0.3333333333333333,
+    "equipment": 1,
+    "muscle": 0.4,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Barbell_Deadlift/0.jpg",
+      "original": 69854,
+      "optimized": 51342,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "1ed8544552f79a7b"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Barbell_Deadlift/1.jpg",
+      "original": 67563,
+      "optimized": 47240,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "117a324816964e32"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 25182,
+      "sha256": "4042a62312cf5e32",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "barbellFloor",
+      "bytes": 2116,
+      "sha256": "1f9dba7c334e8413",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 42139,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:06:19.767Z"
+}

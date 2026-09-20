@@ -95,6 +95,74 @@ Aufwärmen, Gym-Etikette, Wiedereinstieg, Muskelkater vs. Schmerz) plus medizini
 
 ---
 
+## Design und Bildmaterial
+
+**Visuelle Identität:** Weiß und ein sehr helles Grau (`#F7F8FA`) als Fläche, kräftiges Orange
+(`#FF6B00`, dunkel `#E95600`) als einzige Aktionsfarbe, Graphit (`#18202A` / `#667085`) für Text,
+Grün (`#16A34A`) für Erfolg. Der Dunkelmodus ist in Graphit gehalten, nicht in Marineblau.
+Die Farben liegen als CSS-Variablen in `src/index.css` und als Tailwind-Palette in `tailwind.config.js`.
+
+**Bildebenen:** Jede Übung hat drei Darstellungen – die Ausführung, die Zielmuskeln und das Gerät.
+Die Zielmuskel-Grafik wird aus der anatomischen Körperkarte erzeugt und ist deshalb immer korrekt,
+auch für später ergänzte Übungen. Ein Test stellt sicher, dass jede der 85 Übungen ausdrücklich ein
+Gerätebild zugeordnet bekommt. Details und Lizenzen: [`ASSETS.md`](./ASSETS.md).
+
+**Layout:** mobil zuerst, getestet ab 360 px Breite. Ab Tablet wird der Inhalt zentriert und in der
+Breite begrenzt, ab 1024 px ersetzt eine seitliche Navigation die Tab-Leiste. Bedienflächen sind
+mindestens 44 px hoch, im laufenden Training deutlich größer.
+
+**Arabisch:** vollständiges RTL über logische CSS-Eigenschaften (`start`/`end`, `ps`/`pe`) – im Quelltext
+kommt keine einzige feste Links-/Rechts-Angabe vor. Fotos und anatomische Darstellungen werden nicht
+gespiegelt. Arabisch nutzt alle sechs Pluralformen (`_zero`, `_one`, `_two`, `_few`, `_many`, `_other`),
+Deutsch und Englisch je zwei; ein Test prüft beides.
+
+## Übungsfotos importieren
+
+Die Fotos stammen aus dem gemeinfreien Datensatz [free-exercise-db](https://github.com/yuhonas/free-exercise-db)
+und werden vollautomatisch zugeordnet, konvertiert und dokumentiert:
+
+```bash
+npm run media:import            # klont den Datensatz und importiert alles
+npm run media:import -- --dry-run   # nur rechnen, nichts schreiben
+```
+
+Der Lauf ordnet jede LIFTARA-Übung über Name, Equipment, Zielmuskel und Bewegungsmuster zu, akzeptiert
+automatisch erst ab einer Konfidenz von 0,72, prüft zusätzlich Zielmuskel und Equipment und schreibt
+alles Unsichere in `media-reports/unmatched-report.json`, statt eine falsche Übung stillschweigend zu
+übernehmen. Für abweichende Bezeichnungen gibt es im Skript eine handgeprüfte Override-Tabelle.
+
+Ergebnis:
+
+```
+public/media/exercises/<übungs-id>/start.webp
+                                  /finish.webp
+                                  /source.json     Quelle, Lizenz, Konfidenz, Prüfsummen
+src/content/mediaManifest.json                     Zuordnung für die App
+media-reports/unmatched-report.json                offene Fälle mit Begründung
+media-reports/import-stats.json                    Zahlen des letzten Laufs
+```
+
+Für die acht Übungen ohne passende Fremdquelle erzeugt die Pipeline eigene anatomische Posengrafiken –
+keine Übung bleibt ohne Bild.
+Details zu Lizenzen: [`ASSETS.md`](./ASSETS.md) und [`media-reports/licensing-notes.md`](./media-reports/licensing-notes.md).
+
+### Restliche Medien erzeugen
+
+```bash
+npm run media:generate    # Zielmuskel-, Geräte- und Posenbilder sowie Lehrschleifen
+npm run media:reindex     # Manifest nach einem abgebrochenen Lauf mit der Platte abgleichen
+npm run screenshots       # Bildschirmfotos der Hauptansichten nach screenshots/
+```
+
+Damit hat jede der 85 Übungen `start.webp`, `finish.webp`, `equipment.webp`, `muscles.webp`,
+`execution.webm` und `source.json`. Die Lehrschleife blendet zwischen korrekter Start- und Endposition
+um, beschriftet beide Phasen und enthält keine Tonspur.
+
+**Offline und Ladezeit:** Fotos und Videos werden bewusst **nicht** beim ersten Start vorgeladen. Der
+Service Worker hält nur die Oberfläche vor; Übungsbilder landen beim ersten Anzeigen im Cache
+(`CacheFirst`, 180 Tage) und sind danach offline verfügbar. Bilder werden lazy geladen, Videos erst
+abgespielt, wenn sie sichtbar sind – stumm, in Schleife, mit `playsInline` und Standbild.
+
 ## Architektur
 
 ```
@@ -179,12 +247,14 @@ Die App läuft anschließend unter `http://localhost:5173`.
 | `npm test` | Alle Tests einmalig ausführen |
 | `npm run test:watch` | Tests im Watch-Modus |
 | `npm run typecheck` | Nur TypeScript prüfen |
+| `npm run build:preview` | Einzelne HTML-Datei zum Anschauen und Teilen nach `dist-preview/` |
+| `npm run media:import` | Übungsfotos aus free-exercise-db importieren und optimieren |
 
 ---
 
 ## Tests
 
-`npm test` führt 54 Tests in fünf Dateien aus:
+`npm test` führt 79 Tests in sechs Dateien aus:
 
 | Datei | Abgedeckte Bereiche |
 |---|---|
@@ -193,6 +263,7 @@ Die App läuft anschließend unter `http://localhost:5173`.
 | `policy.test.ts` | Free vs. Premium, Rewarded-Freischaltung, Werbe-Häufigkeitsgrenze, Schutz des laufenden Trainings, keine personalisierte Werbung für Minderjährige, Sprachparität und Fallback auf Englisch |
 | `workout.test.ts` | Training abschließen, Rekorde und Erfolge, Übungstausch, Export-Import-Rundlauf, CSV |
 | `render.test.tsx` | Startseite rendert in DE, EN und AR; `dir`-Attribut wechselt korrekt auf `rtl` |
+| `media.test.ts` | Jede der 85 Übungen hat ein zugeordnetes Gerätebild und eine Zielmuskel-Ansicht, alle anatomischen Regionen sind in DE, EN und AR beschriftet; jede Übung hat eine geprüfte Foto-Zuordnung oder steht im Unmatched-Report; keine kaputten Pfade, echte WebP-Dateien unter 180 kB, Lizenzangabe je Asset, keine Mehrfachzuordnung über zwei Übungen hinaus, Zielmuskel-Abgleich |
 
 ---
 

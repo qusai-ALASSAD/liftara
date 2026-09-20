@@ -1,0 +1,55 @@
+{
+  "liftaraId": "band-hip-abduction",
+  "liftaraName": "Band Hip Abduction",
+  "files": [],
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 20468,
+      "sha256": "8493447e82c48b91",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "band",
+      "bytes": 7116,
+      "sha256": "342a58d5d89cf998",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "start",
+      "file": "start.webp",
+      "bytes": 14488,
+      "sha256": "8620946605bdc691",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "finish",
+      "file": "finish.webp",
+      "bytes": 16512,
+      "sha256": "f5b6686b75249800",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 15616,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:33:21.669Z",
+  "dataset": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  }
+}

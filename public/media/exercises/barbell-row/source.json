@@ -1,0 +1,88 @@
+{
+  "liftaraId": "barbell-row",
+  "liftaraName": "Barbell Row",
+  "sourceId": "Bent_Over_Barbell_Row",
+  "sourceName": "Bent Over Barbell Row",
+  "sourceEquipment": "barbell",
+  "sourcePrimaryMuscles": [
+    "middle back"
+  ],
+  "sourceSecondaryMuscles": [
+    "biceps",
+    "lats",
+    "shoulders"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 0.85,
+  "confidenceParts": {
+    "name": 0.6666666666666666,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Bent_Over_Barbell_Row/0.jpg",
+      "original": 64589,
+      "optimized": 41532,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "6c25cb30aae3a5de"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Bent_Over_Barbell_Row/1.jpg",
+      "original": 66556,
+      "optimized": 44614,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "03ba95f9b2e3f1e6"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 22940,
+      "sha256": "5ba5b60af54d835c",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "barbellFloor",
+      "bytes": 2116,
+      "sha256": "1f9dba7c334e8413",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 41197,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

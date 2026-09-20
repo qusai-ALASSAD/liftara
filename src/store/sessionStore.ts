@@ -1,8 +1,7 @@
 import { create } from 'zustand';
 import type { LocalizedText, PlannedWorkout, SetLog, Workout } from '@/types';
 import { EXERCISE_MAP } from '@/content/exercises';
-import { workoutRepo, recordRepo, achievementRepo, programStateRepo } from '@/db/repositories';
-import { getProgram } from '@/content/programs';
+import { workoutRepo, recordRepo, achievementRepo } from '@/db/repositories';
 import { uid } from '@/lib/id';
 import { findNewRecords, workoutVolume } from '@/lib/stats';
 import { evaluateAchievements } from '@/lib/achievements';
@@ -200,21 +199,6 @@ export const useSessionStore = create<SessionState>((set, get) => {
       const allWorkouts = [...app.workouts.filter((w) => w.id !== finished.id), finished];
       const unlocked = evaluateAchievements(allWorkouts, [...app.records, ...newRecords], app.achievements);
       for (const a of unlocked) await achievementRepo.put(a);
-
-      if (finished.programId) {
-        const programState = await programStateRepo.get(finished.programId);
-        if (programState) {
-          const program = getProgram(finished.programId.split(':')[0]!);
-          const completedDays = programState.completedDays + 1;
-          const totalDays = program ? program.daysPerWeek * program.weeks : Number.POSITIVE_INFINITY;
-          await programStateRepo.put({
-            ...programState,
-            completedDays,
-            lastCompletedAt: finished.finishedAt,
-            status: completedDays >= totalDays ? 'completed' : programState.status
-          });
-        }
-      }
 
       app.patchSettings({ completedWorkoutsSinceInterstitial: app.settings.completedWorkoutsSinceInterstitial + 1 });
       await app.refresh();

@@ -1,0 +1,88 @@
+{
+  "liftaraId": "pallof-press",
+  "liftaraName": "Pallof Press",
+  "sourceId": "Pallof_Press",
+  "sourceName": "Pallof Press",
+  "sourceEquipment": "cable",
+  "sourcePrimaryMuscles": [
+    "abdominals"
+  ],
+  "sourceSecondaryMuscles": [
+    "chest",
+    "shoulders",
+    "triceps"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 0.92,
+  "confidenceParts": {
+    "name": 1,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 0.2
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Pallof_Press/0.jpg",
+      "original": 59572,
+      "optimized": 24294,
+      "quality": 82,
+      "width": 1200,
+      "height": 675,
+      "sha256": "338955386ef16243"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Pallof_Press/1.jpg",
+      "original": 51839,
+      "optimized": 20436,
+      "quality": 82,
+      "width": 1200,
+      "height": 675,
+      "sha256": "1900d8eb6ae597ea"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 22432,
+      "sha256": "af0ba7aa5aadea99",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "cableLow",
+      "bytes": 5046,
+      "sha256": "d57f3254fbbc38c6",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 19749,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

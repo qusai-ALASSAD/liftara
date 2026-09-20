@@ -1,0 +1,84 @@
+{
+  "liftaraId": "leg-raise",
+  "liftaraName": "Lying Leg Raise",
+  "sourceId": "Flat_Bench_Lying_Leg_Raise",
+  "sourceName": "Flat Bench Lying Leg Raise",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "abdominals"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 0.82,
+  "confidenceParts": {
+    "name": 0.6,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Flat_Bench_Lying_Leg_Raise/0.jpg",
+      "original": 63658,
+      "optimized": 44918,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "f10a679fb22ae47e"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Flat_Bench_Lying_Leg_Raise/1.jpg",
+      "original": 63835,
+      "optimized": 45350,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "5340e3a3e0f52e1b"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 23084,
+      "sha256": "06d6a22a7fa083bc",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 36109,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

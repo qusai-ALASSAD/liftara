@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Plus } from 'lucide-react';
 import { Button, Card, EmptyState, SectionTitle } from '@/components/ui';
 import { Page } from '@/components/Layout';
-import { ExerciseIllustration, ExerciseMeta, InstructionsBlock, exerciseName } from '@/components/ExerciseInfo';
+import { ExerciseMedia, ExerciseMeta, ExerciseThumb, InstructionsBlock, exerciseName } from '@/components/ExerciseInfo';
+import { FavoriteButton } from '@/components/ExerciseList';
 import { EXERCISE_MAP, getExercise } from '@/content/exercises';
 import { useSessionStore } from '@/store/sessionStore';
+import { muscleLabel } from '@/lib/titles';
 
 export default function ExerciseDetailScreen() {
   const { id } = useParams();
@@ -27,37 +29,43 @@ export default function ExerciseDetailScreen() {
   return (
     <Page
       title={exerciseName(ex, i18n.language)}
+      subtitle={ex.primary.map((m) => muscleLabel(m, i18n.language)).join(' · ')}
       action={
-        <Link to="/library" className="inline-flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-semibold text-royal-600 dark:text-royal-300">
-          <ArrowLeft className="h-4 w-4" aria-hidden />
-          {t('common.back')}
-        </Link>
+        <div className="flex items-center gap-1">
+          <FavoriteButton exerciseId={ex.id} />
+          <Link to="/library" aria-label={t('common.back')} className="flex h-10 w-10 items-center justify-center rounded-xl text-ink-500 hover:text-brand-600">
+            <ArrowLeft className="h-5 w-5 rtl:rotate-180" aria-hidden />
+          </Link>
+        </div>
       }
     >
       <Card>
-        <ExerciseIllustration ex={ex} className="h-40 w-full" />
-        <div className="mt-3"><ExerciseMeta ex={ex} /></div>
+        <ExerciseMedia ex={ex} className="h-60" />
+        <div className="mt-4"><ExerciseMeta ex={ex} /></div>
         {activeWorkout && (
-          <Button className="mt-4 w-full" onClick={() => addExercise(ex.id)}>
-            <Plus className="h-4 w-4" aria-hidden />{t('exercise.addToWorkout')}
+          <Button size="lg" className="mt-4 w-full" onClick={() => addExercise(ex.id)}>
+            <Plus className="h-5 w-5" aria-hidden />{t('exercise.addToWorkout')}
           </Button>
         )}
       </Card>
 
-      <SectionTitle>{t('exercise.setup')}</SectionTitle>
+      <SectionTitle>{t('exercise.howTo')}</SectionTitle>
       <Card><InstructionsBlock ex={ex} /></Card>
 
       {alternatives.length > 0 && (
         <>
           <SectionTitle>{t('exercise.alternatives')}</SectionTitle>
-          <ul className="space-y-2">
+          <ul className="grid gap-2.5 sm:grid-cols-2">
             {alternatives.map((alt) => (
               <li key={alt!.id}>
-                <Link to={`/exercise/${alt!.id}`} className="card flex items-center gap-3 p-3">
-                  <div className="w-14 shrink-0 text-royal-700 dark:text-royal-200">
-                    <ExerciseIllustration ex={alt!} className="h-10 w-full" />
-                  </div>
-                  <span className="min-w-0 flex-1 truncate font-medium">{exerciseName(alt!, i18n.language)}</span>
+                <Link to={`/exercise/${alt!.id}`} className="card flex items-center gap-3 p-2.5">
+                  <ExerciseThumb ex={alt!} className="h-14 w-20 shrink-0" />
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate font-semibold">{exerciseName(alt!, i18n.language)}</span>
+                    <span className="mt-0.5 block truncate text-xs muted">
+                      {alt!.equipment.map((e) => t(`equip.${e}`)).join(', ')}
+                    </span>
+                  </span>
                 </Link>
               </li>
             ))}

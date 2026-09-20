@@ -8,6 +8,7 @@ import { Page } from '@/components/Layout';
 import { AdBanner } from '@/components/AdSlot';
 import { PROGRAMS, getProgram } from '@/content/programs';
 import { EXERCISE_MAP } from '@/content/exercises';
+import { ExerciseThumb, exerciseName } from '@/components/ExerciseInfo';
 import { useAppStore } from '@/store/appStore';
 import { useSessionStore } from '@/store/sessionStore';
 import { planFromExercises } from '@/lib/planGenerator';
@@ -58,6 +59,7 @@ export default function ProgramsScreen() {
     const day = program.days[dayIndex % program.days.length]!;
     const plan = planFromExercises(day.exerciseIds, profile, workouts, day.focus, `${program.id}-${dayIndex}`);
     await startFromPlan(plan, day.workoutTitle, state?.programId ?? program.id);
+    if (state) await putProgramState({ ...state, completedDays: state.completedDays + 1, lastCompletedAt: Date.now() });
     navigate('/workout');
   };
 
@@ -202,10 +204,17 @@ export default function ProgramsScreen() {
                     <div className="mt-1.5 flex flex-wrap gap-1">
                       {day.focus.map((m) => <Badge key={m} tone="brand">{muscleLabel(m, i18n.language)}</Badge>)}
                     </div>
-                    <ul className="mt-2 space-y-0.5 text-xs muted">
-                      {day.exerciseIds.map((exId) => (
-                        <li key={exId}>{EXERCISE_MAP[exId] ? localized(EXERCISE_MAP[exId]!.name, i18n.language) : exId}</li>
-                      ))}
+                    <ul className="mt-2.5 space-y-1.5">
+                      {day.exerciseIds.map((exId) => {
+                        const meta = EXERCISE_MAP[exId];
+                        if (!meta) return <li key={exId} className="text-xs muted">{exId}</li>;
+                        return (
+                          <li key={exId} className="flex items-center gap-2.5">
+                            <ExerciseThumb ex={meta} className="h-9 w-14 shrink-0" />
+                            <span className="min-w-0 flex-1 truncate text-xs font-medium">{exerciseName(meta, i18n.language)}</span>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </li>
                 ))}

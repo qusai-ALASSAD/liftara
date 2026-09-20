@@ -1,0 +1,86 @@
+{
+  "liftaraId": "skullcrusher",
+  "liftaraName": "Lying Triceps Extension",
+  "sourceId": "EZ-Bar_Skullcrusher",
+  "sourceName": "EZ-Bar Skullcrusher",
+  "sourceEquipment": "e-z curl bar",
+  "sourcePrimaryMuscles": [
+    "triceps"
+  ],
+  "sourceSecondaryMuscles": [
+    "forearms"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.55,
+  "confidenceParts": {
+    "name": 0,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "EZ-Bar_Skullcrusher/0.jpg",
+      "original": 38566,
+      "optimized": 28724,
+      "quality": 82,
+      "width": 750,
+      "height": 500,
+      "sha256": "e54be7bd60821310"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "EZ-Bar_Skullcrusher/1.jpg",
+      "original": 37438,
+      "optimized": 27290,
+      "quality": 82,
+      "width": 750,
+      "height": 500,
+      "sha256": "4ad0add873e57301"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 20568,
+      "sha256": "6722c6ac5fee68c1",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "flatBenchBarbell",
+      "bytes": 3478,
+      "sha256": "ac7da2ecc6f3bc80",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 31444,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

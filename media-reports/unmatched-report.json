@@ -1,0 +1,237 @@
+{
+  "generatedAt": "2026-09-18T19:52:48.458Z",
+  "count": 8,
+  "source": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "items": [
+    {
+      "liftaraId": "band-row",
+      "name": "Resistance Band Row",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "Upright_Row_-_With_Bands",
+          "score": 0.64
+        },
+        {
+          "id": "Inverted_Row",
+          "score": 0.5125
+        },
+        {
+          "id": "Band_Good_Morning",
+          "score": 0.49
+        },
+        {
+          "id": "Band_Pull_Apart",
+          "score": 0.49
+        },
+        {
+          "id": "Band_Good_Morning_Pull_Through",
+          "score": 0.4643
+        }
+      ]
+    },
+    {
+      "liftaraId": "band-curl",
+      "name": "Band Curl",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "Barbell_Curl",
+          "score": 0.5
+        },
+        {
+          "id": "Close-Grip_EZ-Bar_Curl_with_Band",
+          "score": 0.5
+        },
+        {
+          "id": "Drag_Curl",
+          "score": 0.5
+        },
+        {
+          "id": "Preacher_Curl",
+          "score": 0.5
+        },
+        {
+          "id": "Spider_Curl",
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "liftaraId": "band-hip-abduction",
+      "name": "Band Hip Abduction",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "Hip_Lift_with_Band",
+          "score": 0.775
+        },
+        {
+          "id": "Band_Hip_Adductions",
+          "score": 0.695
+        },
+        {
+          "id": "Hip_Extension_with_Bands",
+          "score": 0.64
+        },
+        {
+          "id": "Monster_Walk",
+          "score": 0.47
+        },
+        {
+          "id": "Hip_Flexion_with_Band",
+          "score": 0.445
+        }
+      ]
+    },
+    {
+      "liftaraId": "wall-sit",
+      "name": "Wall Sit",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "All_Fours_Quad_Stretch",
+          "score": 0.55
+        },
+        {
+          "id": "Lying_Prone_Quadriceps",
+          "score": 0.5
+        },
+        {
+          "id": "Bench_Jump",
+          "score": 0.47
+        },
+        {
+          "id": "Bodyweight_Squat",
+          "score": 0.47
+        },
+        {
+          "id": "Double_Leg_Butt_Kick",
+          "score": 0.47
+        }
+      ]
+    },
+    {
+      "liftaraId": "calf-raise-bodyweight",
+      "name": "Bodyweight Calf Raise",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "Calf_Raise_On_A_Dumbbell",
+          "score": 0.575
+        },
+        {
+          "id": "Seated_Calf_Raise",
+          "score": 0.575
+        },
+        {
+          "id": "Barbell_Seated_Calf_Raise",
+          "score": 0.53
+        },
+        {
+          "id": "Rocking_Standing_Calf_Raise",
+          "score": 0.53
+        },
+        {
+          "id": "Smith_Machine_Calf_Raise",
+          "score": 0.53
+        }
+      ]
+    },
+    {
+      "liftaraId": "dumbbell-thruster",
+      "name": "Dumbbell Thruster",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "Dumbbell_Flyes",
+          "score": 0.575
+        },
+        {
+          "id": "Dumbbell_Lunges",
+          "score": 0.575
+        },
+        {
+          "id": "Dumbbell_Scaption",
+          "score": 0.575
+        },
+        {
+          "id": "Dumbbell_Squat",
+          "score": 0.575
+        },
+        {
+          "id": "Arnold_Dumbbell_Press",
+          "score": 0.5375
+        }
+      ]
+    },
+    {
+      "liftaraId": "bear-crawl",
+      "name": "Bear Crawl",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "Spider_Crawl",
+          "score": 0.495
+        },
+        {
+          "id": "All_Fours_Quad_Stretch",
+          "score": 0.425
+        },
+        {
+          "id": "Isometric_Chest_Squeezes",
+          "score": 0.425
+        },
+        {
+          "id": "Isometric_Neck_Exercise_-_Front_And_Back",
+          "score": 0.425
+        },
+        {
+          "id": "Isometric_Neck_Exercise_-_Sides",
+          "score": 0.425
+        }
+      ]
+    },
+    {
+      "liftaraId": "burpee-step",
+      "name": "Step-Back Burpee",
+      "reason": "no-suitable-source-exercise",
+      "note": "Im Datensatz existiert keine fachlich korrekte Entsprechung; LIFTARA nutzt die eigene SVG-Zeichnung.",
+      "bestCandidates": [
+        {
+          "id": "Lower_Back_Curl",
+          "score": 0.515
+        },
+        {
+          "id": "Isometric_Neck_Exercise_-_Front_And_Back",
+          "score": 0.4893
+        },
+        {
+          "id": "Step-up_with_Knee_Raise",
+          "score": 0.435
+        },
+        {
+          "id": "All_Fours_Quad_Stretch",
+          "score": 0.425
+        },
+        {
+          "id": "Isometric_Chest_Squeezes",
+          "score": 0.425
+        }
+      ]
+    }
+  ]
+}

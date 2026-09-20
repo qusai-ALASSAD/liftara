@@ -1,0 +1,87 @@
+{
+  "liftaraId": "lateral-raise-cable",
+  "liftaraName": "Cable Lateral Raise",
+  "sourceId": "Cable_Seated_Lateral_Raise",
+  "sourceName": "Cable Seated Lateral Raise",
+  "sourceEquipment": "cable",
+  "sourcePrimaryMuscles": [
+    "shoulders"
+  ],
+  "sourceSecondaryMuscles": [
+    "middle back",
+    "traps"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 0.8875,
+  "confidenceParts": {
+    "name": 0.75,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Cable_Seated_Lateral_Raise/0.jpg",
+      "original": 64199,
+      "optimized": 45990,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "270e707699bb31ec"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Cable_Seated_Lateral_Raise/1.jpg",
+      "original": 65938,
+      "optimized": 47962,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "368c617436aa1fd3"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 20978,
+      "sha256": "6c1d859a54494d81",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "cableLow",
+      "bytes": 5046,
+      "sha256": "d57f3254fbbc38c6",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 38589,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

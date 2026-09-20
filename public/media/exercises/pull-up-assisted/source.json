@@ -1,0 +1,88 @@
+{
+  "liftaraId": "pull-up-assisted",
+  "liftaraName": "Assisted Pull-Up",
+  "sourceId": "Band_Assisted_Pull-Up",
+  "sourceName": "Band Assisted Pull-Up",
+  "sourceEquipment": "other",
+  "sourcePrimaryMuscles": [
+    "lats"
+  ],
+  "sourceSecondaryMuscles": [
+    "abdominals",
+    "forearms",
+    "middle back"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.6,
+  "confidenceParts": {
+    "name": 0.6666666666666666,
+    "equipment": 0,
+    "muscle": 1,
+    "pattern": 0.5
+  },
+  "equipmentMatch": false,
+  "muscleMatch": true,
+  "equipmentNote": "Equipment im Datensatz (\"other\") weicht ab; Zuordnung manuell geprüft.",
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Band_Assisted_Pull-Up/0.jpg",
+      "original": 95314,
+      "optimized": 49978,
+      "quality": 82,
+      "width": 800,
+      "height": 1200,
+      "sha256": "75ce8aca78824e45"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Band_Assisted_Pull-Up/1.jpg",
+      "original": 100304,
+      "optimized": 54222,
+      "quality": 82,
+      "width": 800,
+      "height": 1200,
+      "sha256": "d6a82367875f3cad"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 22940,
+      "sha256": "5ba5b60af54d835c",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "assistedPullup",
+      "bytes": 4378,
+      "sha256": "71e24bfd9a38b193",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 27525,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-09-18T19:52:48.458Z",
+  "source": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "total": 85,
+  "automatic": 37,
+  "override": 40,
+  "unmatched": 8,
+  "images": 154,
+  "bytesOriginal": 9916177,
+  "bytesOptimized": 7090432
+}

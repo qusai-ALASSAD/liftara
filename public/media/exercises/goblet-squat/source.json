@@ -1,0 +1,89 @@
+{
+  "liftaraId": "goblet-squat",
+  "liftaraName": "Goblet Squat",
+  "sourceId": "Goblet_Squat",
+  "sourceName": "Goblet Squat",
+  "sourceEquipment": "kettlebells",
+  "sourcePrimaryMuscles": [
+    "quadriceps"
+  ],
+  "sourceSecondaryMuscles": [
+    "calves",
+    "glutes",
+    "hamstrings",
+    "shoulders"
+  ],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 1,
+  "confidenceParts": {
+    "name": 1,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Goblet_Squat/0.jpg",
+      "original": 34299,
+      "optimized": 26840,
+      "quality": 82,
+      "width": 850,
+      "height": 569,
+      "sha256": "b94115470b171843"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Goblet_Squat/1.jpg",
+      "original": 34362,
+      "optimized": 27284,
+      "quality": 82,
+      "width": 850,
+      "height": 569,
+      "sha256": "408a5ebc2e9dce5f"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 23634,
+      "sha256": "4a189b4dc1a663fb",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "kettlebell",
+      "bytes": 4810,
+      "sha256": "fcbff0f74878cc8a",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 28214,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:52:55.673Z"
+}

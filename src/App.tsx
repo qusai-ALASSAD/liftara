@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BottomNav } from '@/components/Layout';
+import { BottomNav, SideNav } from '@/components/Layout';
 import { useAppStore } from '@/store/appStore';
 import { useSessionStore } from '@/store/sessionStore';
 import { workoutRepo } from '@/db/repositories';
@@ -22,7 +22,7 @@ function Splash() {
   const { t } = useTranslation();
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <div className="h-12 w-12 animate-pulse rounded-2xl bg-royal-600" />
+      <div className="h-12 w-12 animate-pulse rounded-2xl bg-brand-500" />
       <p className="text-sm muted">{t('common.loading')}</p>
     </div>
   );
@@ -56,24 +56,29 @@ export default function App() {
   if (!profile?.onboardingComplete && !onboarding) return <Navigate to="/onboarding" replace />;
   if (profile?.onboardingComplete && onboarding) return <Navigate to="/" replace />;
 
+  const fullBleed = onboarding || location.pathname.startsWith('/workout');
+
   return (
-    <div className="min-h-screen">
-      <Routes>
-        <Route path="/onboarding" element={<OnboardingScreen />} />
-        <Route path="/" element={<TodayScreen />} />
-        <Route path="/muscles" element={<MusclesScreen />} />
-        <Route path="/library" element={<LibraryScreen />} />
-        <Route path="/exercise/:id" element={<ExerciseScreen />} />
-        <Route path="/programs" element={<ProgramsScreen />} />
-        <Route path="/progress" element={<ProgressScreen />} />
-        <Route path="/profile" element={<ProfileScreen />} />
-        <Route path="/education" element={<EducationScreen />} />
-        <Route path="/legal/:page" element={<LegalScreen />} />
-        <Route path="/workout" element={<WorkoutScreen />} />
-        <Route path="/summary/:id" element={<SummaryScreen />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      {!onboarding && !location.pathname.startsWith('/workout') && <BottomNav />}
+    <div className={`min-h-screen ${fullBleed ? '' : 'lg:flex'}`}>
+      {!fullBleed && <SideNav />}
+      <div className="min-w-0 flex-1">
+        <Routes>
+          <Route path="/onboarding" element={<OnboardingScreen />} />
+          <Route path="/" element={<TodayScreen />} />
+          <Route path="/muscles" element={<MusclesScreen />} />
+          <Route path="/library" element={<LibraryScreen />} />
+          <Route path="/exercise/:id" element={<ExerciseScreen />} />
+          <Route path="/programs" element={<ProgramsScreen />} />
+          <Route path="/progress" element={<ProgressScreen />} />
+          <Route path="/profile" element={<ProfileScreen />} />
+          <Route path="/education" element={<EducationScreen />} />
+          <Route path="/legal/:page" element={<LegalScreen />} />
+          <Route path="/workout" element={<WorkoutScreen />} />
+          <Route path="/summary/:id" element={<SummaryScreen />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+      {!fullBleed && <BottomNav />}
     </div>
   );
 }

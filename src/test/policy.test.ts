@@ -93,16 +93,27 @@ describe('Werbe-Regeln', () => {
 
 describe('Mehrsprachigkeit', () => {
   it('hält alle drei Sprachen auf identischem Schlüsselstand', () => {
+    // Pluralsuffixe werden entfernt: Arabisch kennt sechs Formen, Deutsch und Englisch zwei.
+    const strip = (k: string) => k.replace(/_(zero|one|two|few|many|other)$/, '');
     const keys = (obj: Record<string, unknown>, prefix = ''): string[] =>
       Object.entries(obj).flatMap(([k, v]) =>
         v && typeof v === 'object' ? keys(v as Record<string, unknown>, `${prefix}${k}.`) : [`${prefix}${k}`]
       );
-    const de = keys(resources.de.translation as unknown as Record<string, unknown>).sort();
-    const en = keys(resources.en.translation as unknown as Record<string, unknown>).sort();
-    const ar = keys(resources.ar.translation as unknown as Record<string, unknown>).sort();
+    const base = (o: unknown) => [...new Set(keys(o as Record<string, unknown>).map(strip))].sort();
+    const de = base(resources.de.translation);
+    const en = base(resources.en.translation);
+    const ar = base(resources.ar.translation);
     expect(de).toEqual(en);
     expect(ar).toEqual(en);
     expect(en.length).toBeGreaterThan(300);
+  });
+
+  it('bildet arabische Pluralformen vollständig ab', () => {
+    initI18n('ar');
+    const forms = [0, 1, 2, 3, 11, 100].map((count) => i18n.t('common.minutes', { count }));
+    initI18n('en');
+    expect(new Set(forms).size).toBeGreaterThanOrEqual(5);
+    expect(forms.every((f) => f.length > 0 && !f.includes('common.'))).toBe(true);
   });
 
   it('fällt bei fehlender Übersetzung auf Englisch zurück', () => {

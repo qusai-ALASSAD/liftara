@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#1f41d6"/><path d="M14 26h6v12h-6zM44 26h6v12h-6z" fill="#8fb0ff"/><path d="M22 20h5v24h-5zM37 20h5v24h-5z" fill="#fff"/><rect x="27" y="29" width="10" height="6" fill="#84dfa8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LIFTARA">
+  <rect width="64" height="64" rx="16" fill="#FF6B00"/>
+  <rect x="11" y="26" width="6" height="12" rx="2" fill="#FFD3B3"/>
+  <rect x="47" y="26" width="6" height="12" rx="2" fill="#FFD3B3"/>
+  <rect x="19" y="21" width="6" height="22" rx="2.5" fill="#fff"/>
+  <rect x="39" y="21" width="6" height="22" rx="2.5" fill="#fff"/>
+  <rect x="25" y="29" width="14" height="6" rx="3" fill="#fff"/>
+</svg>

@@ -1,0 +1,55 @@
+{
+  "liftaraId": "dumbbell-thruster",
+  "liftaraName": "Dumbbell Thruster",
+  "files": [],
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 23664,
+      "sha256": "b3d1c2f9abfb6763",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "dumbbellPair",
+      "bytes": 4406,
+      "sha256": "cc625ad428b8e6b7",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "start",
+      "file": "start.webp",
+      "bytes": 15512,
+      "sha256": "954c9ac87f0da509",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "finish",
+      "file": "finish.webp",
+      "bytes": 14556,
+      "sha256": "447f20d34cf89c1d",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 18221,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:33:29.679Z",
+  "dataset": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  }
+}

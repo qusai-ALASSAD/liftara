@@ -39,7 +39,7 @@ export default function ProfileScreen() {
     <Page title={t('profile.title')}>
       <Card>
         <div className="flex items-center gap-3">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-royal-600 text-white">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500 text-white">
             <User className="h-6 w-6" aria-hidden />
           </span>
           <div className="min-w-0 flex-1">
@@ -185,7 +185,7 @@ function NavRow({ to, icon, label }: { to: string; icon: React.ReactNode; label:
   return (
     <li>
       <Link to={to} className="card flex items-center gap-3 p-3.5">
-        <span className="text-royal-500">{icon}</span>
+        <span className="text-brand-500">{icon}</span>
         <span className="flex-1 font-medium">{label}</span>
         <ChevronRight className="h-4 w-4 muted rtl:rotate-180" aria-hidden />
       </Link>

@@ -1,0 +1,55 @@
+{
+  "liftaraId": "burpee-step",
+  "liftaraName": "Step-Back Burpee",
+  "files": [],
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 23866,
+      "sha256": "ec36217370c22bbc",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "start",
+      "file": "start.webp",
+      "bytes": 13010,
+      "sha256": "04bbb4ecdcc807e7",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "finish",
+      "file": "finish.webp",
+      "bytes": 12724,
+      "sha256": "ef61f3974c11e306",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 14483,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:33:34.744Z",
+  "dataset": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  }
+}

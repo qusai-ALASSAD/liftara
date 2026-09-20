@@ -9,7 +9,8 @@ export const defaultSettings = (): Settings => ({
   units: 'metric',
   premium: false,
   consent: { decided: false, analytics: false, ads: false, personalizedAds: false },
-  completedWorkoutsSinceInterstitial: 0
+  completedWorkoutsSinceInterstitial: 0,
+  favorites: []
 });
 
 export function loadSettings(): Settings {

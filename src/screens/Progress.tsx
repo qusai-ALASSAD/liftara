@@ -35,10 +35,6 @@ export default function ProgressScreen() {
   const addMeasurement = useAppStore((s) => s.addMeasurement);
   const deleteEverything = useAppStore((s) => s.deleteEverything);
   const refresh = useAppStore((s) => s.refresh);
-  const patchSettings = useAppStore((s) => s.patchSettings);
-  const setLocale = useAppStore((s) => s.setLocale);
-  const setTheme = useAppStore((s) => s.setTheme);
-  const setUnits = useAppStore((s) => s.setUnits);
 
   const [exerciseId, setExerciseId] = useState<string>('');
   const [weightInput, setWeightInput] = useState('');
@@ -145,12 +141,7 @@ export default function ProgressScreen() {
     try {
       const bundle = parseBundle(await file.text());
       await importBundle(bundle);
-      patchSettings(bundle.settings);
-      setTheme(bundle.settings.theme);
       await refresh();
-      setUnits(bundle.settings.units);
-      setLocale(bundle.settings.locale);
-      setPhotos(await photoRepo.all());
       setMessage(t('progress.importSuccess'));
     } catch {
       setMessage(t('progress.importError'));
@@ -164,7 +155,7 @@ export default function ProgressScreen() {
       <div className="h-48 w-full" dir="ltr">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgb(var(--line))" />
+            <CartesianGrid strokeDasharray="3 3" stroke="rgb(var(--hairline))" />
             <XAxis dataKey="date" tick={{ fontSize: 11 }} reversed={rtl} />
             <YAxis tick={{ fontSize: 11 }} width={44} orientation={rtl ? 'right' : 'left'} />
             <Tooltip formatter={(v) => [`${v}`, label]} />
@@ -190,7 +181,7 @@ export default function ProgressScreen() {
             <li
               key={d.day}
               className={`flex h-9 items-center justify-center rounded-lg text-xs font-medium ${
-                d.trained ? 'bg-moss-500 text-white' : 'bg-sand-100 muted dark:bg-navy-800'
+                d.trained ? 'bg-success-500 text-white' : 'bg-ink-100 muted dark:bg-ink-800'
               }`}
             >
               {d.label}
@@ -250,7 +241,7 @@ export default function ProgressScreen() {
           <div className="h-56 w-full" dir="ltr">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={muscleSeries} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgb(var(--line))" />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgb(var(--hairline))" />
                 <XAxis dataKey="muscle" tick={{ fontSize: 10 }} interval={0} angle={-35} textAnchor="end" height={60} reversed={rtl} />
                 <YAxis tick={{ fontSize: 11 }} width={32} orientation={rtl ? 'right' : 'left'} />
                 <Tooltip />
@@ -284,7 +275,7 @@ export default function ProgressScreen() {
         <ul className="grid grid-cols-2 gap-2">
           {achievements.map((a) => (
             <Card key={a.id} as="li">
-              <Award className="h-5 w-5 text-moss-500" aria-hidden />
+              <Award className="h-5 w-5 text-success-500" aria-hidden />
               <p className="mt-1 font-semibold">{t(`achievements.${a.id}`)}</p>
               <p className="text-xs muted">{formatDate(a.unlockedAt, i18n.language)}</p>
             </Card>
@@ -304,7 +295,7 @@ export default function ProgressScreen() {
           <ul className="mt-3 grid grid-cols-3 gap-2">
             {photos.slice(0, 6).map((p) => (
               <li key={p.id}>
-                <ProgressPhotoImage photo={p} locale={i18n.language} />
+                <img src={URL.createObjectURL(p.blob)} alt={formatDate(p.date, i18n.language)} className="h-28 w-full rounded-xl object-cover" />
               </li>
             ))}
           </ul>
@@ -334,7 +325,7 @@ export default function ProgressScreen() {
             <Trash2 className="h-4 w-4" aria-hidden />{t('progress.deleteAll')}
           </Button>
         </div>
-        {message && <p className="mt-3 text-sm text-moss-600" role="status">{message}</p>}
+        {message && <p className="mt-3 text-sm text-success-600" role="status">{message}</p>}
       </Card>
 
       <div className="mt-6">
@@ -348,7 +339,7 @@ export default function ProgressScreen() {
         footer={
           <>
             <Button variant="ghost" onClick={() => setDeleteOpen(false)}>{t('common.cancel')}</Button>
-            <Button variant="danger" onClick={async () => { await deleteEverything(); setPhotos([]); setDeleteOpen(false); }}>{t('common.delete')}</Button>
+            <Button variant="danger" onClick={async () => { await deleteEverything(); setDeleteOpen(false); }}>{t('common.delete')}</Button>
           </>
         }
       >
@@ -358,22 +349,12 @@ export default function ProgressScreen() {
   );
 }
 
-function ProgressPhotoImage({ photo, locale }: { photo: ProgressPhoto; locale: string }) {
-  const [url, setUrl] = useState('');
-  useEffect(() => {
-    const next = URL.createObjectURL(photo.blob);
-    setUrl(next);
-    return () => URL.revokeObjectURL(next);
-  }, [photo.blob]);
-  return <img src={url} alt={formatDate(photo.date, locale)} className="h-28 w-full rounded-xl object-cover" />;
-}
-
 function LockedAnalytics() {
   const { t } = useTranslation();
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2">
-        <Lock className="h-4 w-4 text-royal-500" aria-hidden />
+        <Lock className="h-4 w-4 text-brand-500" aria-hidden />
         <p className="text-sm font-semibold">{t('profile.premiumDesc')}</p>
         <Badge tone="warn">{t('common.premium')}</Badge>
       </div>

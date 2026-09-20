@@ -1,0 +1,84 @@
+{
+  "liftaraId": "hanging-knee-raise",
+  "liftaraName": "Hanging Knee Raise",
+  "sourceId": "Hanging_Leg_Raise",
+  "sourceName": "Hanging Leg Raise",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "abdominals"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "expert",
+  "matchedBy": "automatic",
+  "confidence": 0.775,
+  "confidenceParts": {
+    "name": 0.5,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Hanging_Leg_Raise/0.jpg",
+      "original": 51687,
+      "optimized": 32582,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "8034935379a3ae9a"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Hanging_Leg_Raise/1.jpg",
+      "original": 56061,
+      "optimized": 36160,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "669398ac4333fd35"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 22354,
+      "sha256": "a0f67802a02a1955",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "captainsChair",
+      "bytes": 3516,
+      "sha256": "842d08533c6ca500",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 31327,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

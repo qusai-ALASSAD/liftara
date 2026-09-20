@@ -1,0 +1,87 @@
+{
+  "liftaraId": "diamond-push-up",
+  "liftaraName": "Diamond Push-Up",
+  "sourceId": "Push-Ups_-_Close_Triceps_Position",
+  "sourceName": "Push-Ups - Close Triceps Position",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "triceps"
+  ],
+  "sourceSecondaryMuscles": [
+    "chest",
+    "shoulders"
+  ],
+  "sourceLevel": "intermediate",
+  "matchedBy": "override",
+  "confidence": 0.625,
+  "confidenceParts": {
+    "name": 0.16666666666666666,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Push-Ups_-_Close_Triceps_Position/0.jpg",
+      "original": 65703,
+      "optimized": 47878,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "a411f80388078553"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Push-Ups_-_Close_Triceps_Position/1.jpg",
+      "original": 65466,
+      "optimized": 47410,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "103656a8b0216501"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 20898,
+      "sha256": "e181789915b6058c",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 38508,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

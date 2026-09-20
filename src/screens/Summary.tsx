@@ -13,6 +13,7 @@ import { displayWeight, formatNumber, weightUnit } from '@/lib/units';
 import { formatDuration } from '@/lib/date';
 import { localized, muscleLabel } from '@/lib/titles';
 import { EXERCISE_MAP } from '@/content/exercises';
+import { AnatomyMap } from '@/components/AnatomyMap';
 
 export default function SummaryScreen() {
   const { id } = useParams();
@@ -90,9 +91,15 @@ export default function SummaryScreen() {
       {muscles.length === 0 ? (
         <Card><p className="text-sm muted">{t('workout.emptyState')}</p></Card>
       ) : (
-        <div className="flex flex-wrap gap-1.5">
-          {muscles.map((m) => <Badge key={m} tone="brand">{muscleLabel(m, i18n.language)}</Badge>)}
-        </div>
+        <Card className="flex items-center gap-4">
+          <div className="media-frame flex h-36 shrink-0 gap-1 p-2">
+            <AnatomyMap view="front" primary={muscles} title={t('workout.musclesTrained')} className="w-16" />
+            <AnatomyMap view="back" primary={muscles} title={t('workout.musclesTrained')} className="w-16" />
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {muscles.map((m) => <Badge key={m} tone="brand">{muscleLabel(m, i18n.language)}</Badge>)}
+          </div>
+        </Card>
       )}
 
       {prs.length > 0 && (

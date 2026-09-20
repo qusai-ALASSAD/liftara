@@ -33,7 +33,7 @@ export default function LegalScreen() {
     <Page
       title={t(`${key}.title`)}
       action={
-        <Link to="/profile" className="inline-flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-semibold text-royal-600 dark:text-royal-300">
+        <Link to="/profile" className="inline-flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-semibold text-brand-500 dark:text-brand-300">
           <ArrowLeft className="h-4 w-4 rtl:rotate-180" aria-hidden />
           {t('common.back')}
         </Link>

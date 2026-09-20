@@ -1,0 +1,88 @@
+{
+  "liftaraId": "nordic-curl-assisted",
+  "liftaraName": "Assisted Nordic Curl",
+  "sourceId": "Natural_Glute_Ham_Raise",
+  "sourceName": "Natural Glute Ham Raise",
+  "sourceEquipment": "body only",
+  "sourcePrimaryMuscles": [
+    "hamstrings"
+  ],
+  "sourceSecondaryMuscles": [
+    "calves",
+    "glutes",
+    "lower back"
+  ],
+  "sourceLevel": "intermediate",
+  "matchedBy": "override",
+  "confidence": 0.55,
+  "confidenceParts": {
+    "name": 0,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Natural_Glute_Ham_Raise/0.jpg",
+      "original": 51751,
+      "optimized": 39986,
+      "quality": 82,
+      "width": 750,
+      "height": 500,
+      "sha256": "1b881fb51e03d173"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Natural_Glute_Ham_Raise/1.jpg",
+      "original": 53582,
+      "optimized": 40196,
+      "quality": 82,
+      "width": 750,
+      "height": 500,
+      "sha256": "5b9d50cf0da0b8b1"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 22524,
+      "sha256": "d744f5e6c536dff1",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "mat",
+      "bytes": 2322,
+      "sha256": "32e3b72b3181305e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 40645,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:06:52.438Z"
+}

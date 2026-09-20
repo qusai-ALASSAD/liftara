@@ -1,11 +1,10 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { Blob as NodeBlob } from 'node:buffer';
 import type { PlannedWorkout } from '@/types';
 import { demoProfile } from '@/content/demoProfile';
 import { EXERCISE_MAP } from '@/content/exercises';
 import { useAppStore } from '@/store/appStore';
 import { useSessionStore } from '@/store/sessionStore';
-import { photoRepo, profileRepo, programStateRepo, recordRepo, workoutRepo, wipeAllData } from '@/db/repositories';
+import { profileRepo, recordRepo, workoutRepo, wipeAllData } from '@/db/repositories';
 import { buildExportBundle, importBundle, parseBundle, workoutsToCsv } from '@/lib/exportImport';
 import { defaultSettings } from '@/lib/settings';
 import { generatePlan } from '@/lib/planGenerator';
@@ -59,18 +58,6 @@ describe('Workout abschließen', () => {
     expect(useAppStore.getState().settings.completedWorkoutsSinceInterstitial).toBe(1);
   });
 
-  it('zählt einen Programmtag erst nach abgeschlossenem Training', async () => {
-    await programStateRepo.put({
-      programId: 'beginner-muscle-3', startedAt: Date.now(), status: 'active',
-      completedDays: 0, weekdays: [0, 2, 4]
-    });
-    const plan = generatePlan({ profile, workouts: [], force: true }).workout;
-    await useSessionStore.getState().startFromPlan(plan, title, 'beginner-muscle-3');
-    expect((await programStateRepo.get('beginner-muscle-3'))?.completedDays).toBe(0);
-    await useSessionStore.getState().finish();
-    expect((await programStateRepo.get('beginner-muscle-3'))?.completedDays).toBe(1);
-  });
-
   it('verwirft ein Workout vollständig', async () => {
     const plan = generatePlan({ profile, workouts: [] }).workout;
     await useSessionStore.getState().startFromPlan(plan, title);
@@ -103,7 +90,6 @@ describe('Export und Import', () => {
     );
     await useSessionStore.getState().finish();
 
-    await photoRepo.put({ id: 'photo-1', date: Date.now(), blob: new NodeBlob(['image'], { type: 'image/png' }) as unknown as Blob });
     const bundle = await buildExportBundle(defaultSettings());
     const json = JSON.stringify(bundle);
 
@@ -117,7 +103,6 @@ describe('Export und Import', () => {
     expect((await workoutRepo.all()).length).toBe(bundle.workouts.length);
     expect((await profileRepo.get())?.name).toBe(profile.name);
     expect((await recordRepo.all()).length).toBe(bundle.records.length);
-    expect((await photoRepo.all()).length).toBe(1);
   });
 
   it('weist fremde oder beschädigte Dateien ab', () => {

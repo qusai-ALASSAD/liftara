@@ -1,0 +1,84 @@
+{
+  "liftaraId": "leg-extension",
+  "liftaraName": "Leg Extension",
+  "sourceId": "Leg_Extensions",
+  "sourceName": "Leg Extensions",
+  "sourceEquipment": "machine",
+  "sourcePrimaryMuscles": [
+    "quadriceps"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.7,
+  "confidenceParts": {
+    "name": 0.3333333333333333,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Leg_Extensions/0.jpg",
+      "original": 81219,
+      "optimized": 61156,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "2c949fc2fcf103e6"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Leg_Extensions/1.jpg",
+      "original": 82758,
+      "optimized": 63070,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "59e963fde4840dc2"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 21926,
+      "sha256": "dbce41aab9a03c1c",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "legExtension",
+      "bytes": 4758,
+      "sha256": "9740fc4ab4bac17e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 54706,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:33:37.481Z"
+}

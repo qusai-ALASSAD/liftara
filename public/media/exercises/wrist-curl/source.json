@@ -1,0 +1,84 @@
+{
+  "liftaraId": "wrist-curl",
+  "liftaraName": "Wrist Curl",
+  "sourceId": "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench",
+  "sourceName": "Palms-Up Barbell Wrist Curl Over A Bench",
+  "sourceEquipment": "barbell",
+  "sourcePrimaryMuscles": [
+    "forearms"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.73,
+  "confidenceParts": {
+    "name": 0.4,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/0.jpg",
+      "original": 66388,
+      "optimized": 45490,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "a24a9fa6e3359cae"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/1.jpg",
+      "original": 67327,
+      "optimized": 46602,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "d1f434ba50a32433"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 21484,
+      "sha256": "4953df3c62d314d2",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "dumbbellPair",
+      "bytes": 4406,
+      "sha256": "cc625ad428b8e6b7",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 37130,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

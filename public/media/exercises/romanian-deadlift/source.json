@@ -1,0 +1,88 @@
+{
+  "liftaraId": "romanian-deadlift",
+  "liftaraName": "Romanian Deadlift",
+  "sourceId": "Romanian_Deadlift",
+  "sourceName": "Romanian Deadlift",
+  "sourceEquipment": "barbell",
+  "sourcePrimaryMuscles": [
+    "hamstrings"
+  ],
+  "sourceSecondaryMuscles": [
+    "calves",
+    "glutes",
+    "lower back"
+  ],
+  "sourceLevel": "intermediate",
+  "matchedBy": "automatic",
+  "confidence": 1,
+  "confidenceParts": {
+    "name": 1,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Romanian_Deadlift/0.jpg",
+      "original": 59859,
+      "optimized": 40154,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "ccfd3786f9af7b22"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Romanian_Deadlift/1.jpg",
+      "original": 57367,
+      "optimized": 38266,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "d73f0cc3b770de31"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 24744,
+      "sha256": "8df7b9603112f15e",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "barbellFloor",
+      "bytes": 2116,
+      "sha256": "1f9dba7c334e8413",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 34346,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T21:06:57.334Z"
+}

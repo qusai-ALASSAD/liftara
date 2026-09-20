@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Check, Sparkles } from 'lucide-react';
 import type { ContraindicationTag, Equipment, ExperienceLevel, Gender, Locale, ProgramGoal, Profile, TrainingPlace, UnitSystem } from '@/types';
 import { EQUIPMENT } from '@/types';
 import { Button, Card, Chip, Field, Input, Progress, Select, Toggle } from '@/components/ui';
+import { Wordmark } from '@/components/Layout';
 import { useAppStore } from '@/store/appStore';
 import { demoProfile } from '@/content/demoProfile';
 import { displayLength, displayWeight, inToCm, lbToKg } from '@/lib/units';
@@ -52,12 +53,8 @@ export default function OnboardingScreen() {
     if (s === 2) {
       const h = Number(d.heightCm);
       const w = Number(d.weightKg);
-      const gw = Number(d.goalWeightKg);
-      const heightRange = d.units === 'metric' ? [100, 260] : [39, 102];
-      const weightRange = d.units === 'metric' ? [30, 300] : [66, 661];
-      if (!Number.isFinite(h) || h < heightRange[0]! || h > heightRange[1]!) e.height = t('onboarding.errHeight');
-      if (!Number.isFinite(w) || w < weightRange[0]! || w > weightRange[1]!) e.weight = t('onboarding.errWeight');
-      if (!Number.isFinite(gw) || gw < weightRange[0]! || gw > weightRange[1]!) e.goalWeight = t('onboarding.errGoalWeight');
+      if (!Number.isFinite(h) || h < 100 || h > 260) e.height = t('onboarding.errHeight');
+      if (!Number.isFinite(w) || w < 30 || w > 300) e.weight = t('onboarding.errWeight');
     }
     if (s === 5 && d.equipment.length === 0) e.equipment = t('onboarding.errEquipment');
     setErrors(e);
@@ -97,15 +94,17 @@ export default function OnboardingScreen() {
       {step === 0 && (
         <div className="flex flex-1 flex-col justify-center gap-6 animate-fade-up">
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-royal-600">{t('common.appName')}</p>
-            <h1 className="mt-3 font-display text-3xl font-semibold leading-tight">{t('onboarding.welcomeTitle')}</h1>
+            <Wordmark />
+            <h1 className="mt-5 font-display text-[32px] font-bold leading-tight">{t('onboarding.welcomeTitle')}</h1>
             <p className="mt-3 text-[15px] muted">{t('onboarding.welcomeText')}</p>
-            <p className="mt-4 text-sm font-medium text-moss-600">{t('common.tagline')}</p>
+            <p className="mt-4 text-sm font-semibold text-brand-600">{t('common.tagline')}</p>
           </div>
           <div className="space-y-3">
             <Button size="lg" className="w-full" onClick={() => setStep(1)}>{t('onboarding.welcomeCta')}<ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden /></Button>
             <Card className="flex items-start gap-3">
-              <Sparkles className="mt-0.5 h-5 w-5 text-moss-500" aria-hidden />
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl tint text-brand-500">
+                <Sparkles className="h-5 w-5" aria-hidden />
+              </span>
               <div className="flex-1">
                 <p className="font-semibold">{t('onboarding.demoTitle')}</p>
                 <p className="mt-1 text-sm muted">{t('onboarding.demoText')}</p>
@@ -169,7 +168,7 @@ export default function OnboardingScreen() {
           <Field label={`${t('onboarding.weight')} (${d.units === 'metric' ? t('common.kg') : t('common.lb')})`} error={errors.weight} htmlFor="ob-w">
             <Input id="ob-w" type="number" inputMode="decimal" value={d.weightKg} onChange={(e) => patch({ weightKg: e.target.value })} />
           </Field>
-          <Field label={`${t('onboarding.goalWeight')} (${d.units === 'metric' ? t('common.kg') : t('common.lb')})`} error={errors.goalWeight} htmlFor="ob-gw">
+          <Field label={`${t('onboarding.goalWeight')} (${d.units === 'metric' ? t('common.kg') : t('common.lb')})`} htmlFor="ob-gw">
             <Input id="ob-gw" type="number" inputMode="decimal" value={d.goalWeightKg} onChange={(e) => patch({ goalWeightKg: e.target.value })} />
           </Field>
         </section>

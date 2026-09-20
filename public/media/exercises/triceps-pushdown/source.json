@@ -1,0 +1,84 @@
+{
+  "liftaraId": "triceps-pushdown",
+  "liftaraName": "Cable Triceps Pushdown",
+  "sourceId": "Triceps_Pushdown",
+  "sourceName": "Triceps Pushdown",
+  "sourceEquipment": "cable",
+  "sourcePrimaryMuscles": [
+    "triceps"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 0.85,
+  "confidenceParts": {
+    "name": 0.6666666666666666,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Triceps_Pushdown/0.jpg",
+      "original": 77630,
+      "optimized": 57940,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "04a15e99cafa24db"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Triceps_Pushdown/1.jpg",
+      "original": 78235,
+      "optimized": 58224,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "765f023bac2033f8"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 20568,
+      "sha256": "6722c6ac5fee68c1",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "cableHighBar",
+      "bytes": 4338,
+      "sha256": "e28d0397ba78bf41",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 51219,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

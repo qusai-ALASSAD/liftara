@@ -1,0 +1,84 @@
+{
+  "liftaraId": "hammer-curl",
+  "liftaraName": "Hammer Curl",
+  "sourceId": "Hammer_Curls",
+  "sourceName": "Hammer Curls",
+  "sourceEquipment": "dumbbell",
+  "sourcePrimaryMuscles": [
+    "biceps"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.7,
+  "confidenceParts": {
+    "name": 0.3333333333333333,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Hammer_Curls/0.jpg",
+      "original": 51669,
+      "optimized": 32698,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "31957b6ad5df7a80"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Hammer_Curls/1.jpg",
+      "original": 52323,
+      "optimized": 33198,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "9153404705a48676"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 21788,
+      "sha256": "dc739c2ebda814aa",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "dumbbellPair",
+      "bytes": 4406,
+      "sha256": "cc625ad428b8e6b7",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 27216,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

@@ -1,0 +1,84 @@
+{
+  "liftaraId": "cable-crunch",
+  "liftaraName": "Cable Crunch",
+  "sourceId": "Cable_Crunch",
+  "sourceName": "Cable Crunch",
+  "sourceEquipment": "cable",
+  "sourcePrimaryMuscles": [
+    "abdominals"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "automatic",
+  "confidence": 1,
+  "confidenceParts": {
+    "name": 1,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Cable_Crunch/0.jpg",
+      "original": 67271,
+      "optimized": 47664,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "dd506c5651bd3d21"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Cable_Crunch/1.jpg",
+      "original": 65445,
+      "optimized": 46482,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "edbf8bc33e94342d"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "front",
+      "bytes": 21464,
+      "sha256": "46dbcc2f6d4569a1",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "cableRope",
+      "bytes": 5396,
+      "sha256": "3b801805f6729d61",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 41161,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

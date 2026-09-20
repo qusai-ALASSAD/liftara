@@ -1,0 +1,84 @@
+{
+  "liftaraId": "overhead-triceps-dumbbell",
+  "liftaraName": "Overhead Triceps Extension",
+  "sourceId": "Standing_Dumbbell_Triceps_Extension",
+  "sourceName": "Standing Dumbbell Triceps Extension",
+  "sourceEquipment": "dumbbell",
+  "sourcePrimaryMuscles": [
+    "triceps"
+  ],
+  "sourceSecondaryMuscles": [],
+  "sourceLevel": "beginner",
+  "matchedBy": "override",
+  "confidence": 0.73,
+  "confidenceParts": {
+    "name": 0.4,
+    "equipment": 1,
+    "muscle": 1,
+    "pattern": 1
+  },
+  "equipmentMatch": true,
+  "muscleMatch": true,
+  "equipmentNote": null,
+  "files": [
+    {
+      "role": "start",
+      "sourceFile": "Standing_Dumbbell_Triceps_Extension/0.jpg",
+      "original": 56352,
+      "optimized": 37032,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "70e69d490cbcfd82"
+    },
+    {
+      "role": "finish",
+      "sourceFile": "Standing_Dumbbell_Triceps_Extension/1.jpg",
+      "original": 56376,
+      "optimized": 37288,
+      "quality": 82,
+      "width": 850,
+      "height": 567,
+      "sha256": "fa0acae031f6a375"
+    }
+  ],
+  "dataset": {
+    "name": "free-exercise-db",
+    "url": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense (public domain)",
+    "licenseUrl": "https://github.com/yuhonas/free-exercise-db/blob/main/LICENSE.md",
+    "attributionRequired": false
+  },
+  "importedAt": "2026-09-18T19:52:48.458Z",
+  "generated": [
+    {
+      "role": "muscles",
+      "file": "muscles.webp",
+      "view": "back",
+      "bytes": 20568,
+      "sha256": "6722c6ac5fee68c1",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "equipment",
+      "file": "equipment.webp",
+      "visual": "dumbbellPair",
+      "bytes": 4406,
+      "sha256": "cc625ad428b8e6b7",
+      "origin": "LIFTARA (eigene Grafik)"
+    },
+    {
+      "role": "execution",
+      "file": "execution.webm",
+      "bytes": 29888,
+      "origin": "LIFTARA (eigene Grafik)",
+      "kind": "instructional-loop"
+    }
+  ],
+  "generatedBy": {
+    "name": "LIFTARA (eigene Grafik)",
+    "license": "Projekteigene Grafik, frei weitergebbar",
+    "url": "https://github.com/qusai-ALASSAD/liftara"
+  },
+  "generatedAt": "2026-09-18T20:57:58.238Z"
+}

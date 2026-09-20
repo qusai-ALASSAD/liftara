@@ -28,6 +28,7 @@ interface AppState {
   setPremium: (v: boolean) => void;
   setConsent: (c: Partial<Consent>) => void;
   grantRewardUnlock: () => void;
+  toggleFavorite: (exerciseId: string) => void;
   saveProfile: (p: Profile) => Promise<void>;
   addMeasurement: (m: BodyMeasurement) => Promise<void>;
   putProgramState: (s: ProgramState) => Promise<void>;
@@ -79,15 +80,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     if (profile) void profileRepo.put({ ...profile, locale: l }).then(() => set({ profile: { ...profile, locale: l } }));
   },
 
-  setUnits: (u) => {
-    get().patchSettings({ units: u });
-    const profile = get().profile;
-    if (profile && profile.units !== u) {
-      const next = { ...profile, units: u };
-      set({ profile: next });
-      void profileRepo.put(next);
-    }
-  },
+  setUnits: (u) => get().patchSettings({ units: u }),
 
   setTheme: (t) => {
     get().patchSettings({ theme: t });
@@ -106,6 +99,12 @@ export const useAppStore = create<AppState>((set, get) => ({
   },
 
   grantRewardUnlock: () => get().patchSettings({ lastRewardUnlockAt: Date.now() }),
+
+  toggleFavorite: (exerciseId) => {
+    const current = get().settings.favorites ?? [];
+    const next = current.includes(exerciseId) ? current.filter((id) => id !== exerciseId) : [...current, exerciseId];
+    get().patchSettings({ favorites: next });
+  },
 
   saveProfile: async (p) => {
     await profileRepo.put(p);

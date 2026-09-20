@@ -31,7 +31,7 @@ export function AdBanner({ placement }: { placement: Extract<AdPlacement, 'banne
   if (!decision.allowed) return null;
   return (
     <aside className="card flex items-center gap-3 border-dashed p-3" aria-label={t('ads.label')}>
-      <Megaphone className="h-5 w-5 shrink-0 text-royal-500" aria-hidden />
+      <Megaphone className="h-5 w-5 shrink-0 text-brand-500" aria-hidden />
       <div className="min-w-0 flex-1">
         <p className="text-[11px] font-semibold uppercase tracking-wide muted">{t('ads.label')}</p>
         <p className="truncate text-sm font-medium">{t('ads.mock')}</p>
@@ -42,7 +42,7 @@ export function AdBanner({ placement }: { placement: Extract<AdPlacement, 'banne
 }
 
 export function InterstitialAd({ onClose }: { onClose: () => void }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const decision = useAdDecision('interstitialPostWorkout');
   const patchSettings = useAppStore((s) => s.patchSettings);
   const [shown, setShown] = useState(false);
@@ -50,19 +50,18 @@ export function InterstitialAd({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     if (!decision.allowed) return;
     let cancelled = false;
-    const locale = i18n.resolvedLanguage === 'ar' || i18n.resolvedLanguage === 'en' ? i18n.resolvedLanguage : 'de';
-    void provider.show({ placement: 'interstitialPostWorkout', kind: 'interstitial', personalized: decision.personalized, locale }).then((res) => {
+    void provider.show({ placement: 'interstitialPostWorkout', kind: 'interstitial', personalized: decision.personalized, locale: 'de' }).then((res) => {
       if (!cancelled && res.shown) {
         setShown(true);
         patchSettings({ completedWorkoutsSinceInterstitial: 0 });
       }
     });
     return () => { cancelled = true; };
-  }, [decision.allowed, decision.allowed && decision.personalized, i18n.resolvedLanguage, patchSettings]);
+  }, [decision, patchSettings]);
 
   if (!decision.allowed || !shown) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-navy-950/70 p-6" role="dialog" aria-modal="true" aria-label={t('ads.label')}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/70 p-6" role="dialog" aria-modal="true" aria-label={t('ads.label')}>
       <div className="card w-full max-w-sm animate-fade-up p-6 text-center">
         <p className="text-[11px] font-semibold uppercase tracking-wide muted">{t('ads.label')}</p>
         <div className="my-6 flex h-40 items-center justify-center rounded-2xl border border-dashed hairline">
@@ -75,7 +74,7 @@ export function InterstitialAd({ onClose }: { onClose: () => void }) {
 }
 
 export function RewardedAdCard() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const settings = useAppStore((s) => s.settings);
   const grant = useAppStore((s) => s.grantRewardUnlock);
   const decision = useAdDecision('rewardedReport');
@@ -86,7 +85,7 @@ export function RewardedAdCard() {
   return (
     <div className="card border-dashed p-4">
       <div className="flex items-start gap-3">
-        <Sparkles className="mt-0.5 h-5 w-5 text-moss-500" aria-hidden />
+        <Sparkles className="mt-0.5 h-5 w-5 text-success-500" aria-hidden />
         <div className="flex-1">
           <p className="font-semibold">{t('ads.rewardTitle')}</p>
           <p className="mt-1 text-sm muted">{done ? t('ads.granted') : t('ads.rewardText')}</p>
@@ -96,8 +95,7 @@ export function RewardedAdCard() {
               disabled={!decision.allowed}
               onClick={async () => {
                 setLoading(true);
-                const locale = i18n.resolvedLanguage === 'ar' || i18n.resolvedLanguage === 'en' ? i18n.resolvedLanguage : 'de';
-                const res = await provider.show({ placement: 'rewardedReport', kind: 'rewarded', personalized: decision.allowed && decision.personalized, locale });
+                const res = await provider.show({ placement: 'rewardedReport', kind: 'rewarded', personalized: decision.allowed && decision.personalized, locale: 'de' });
                 setLoading(false);
                 if (res.rewardGranted) { grant(); setDone(true); }
               }}
